@@ -1,8 +1,9 @@
-# 🚀 Frontend Blog Application
+# 🚀 Blog Application
 
 A modern, responsive frontend web application built with React 19, Vite, TailwindCSS, and Redux Toolkit. Designed for high performance and rapid development with a smooth developer experience.
 
 # 🧰 Tech Stack
+
 React 19 – UI library for building interactive interfaces
 
 Vite – Next-generation frontend tooling for lightning-fast builds
@@ -69,7 +70,7 @@ JS-Cookie – Cookie management utility
 
 # 📦 Installation
 
-git clone https://github.com/your-username/frontend.git
+git clone - https://github.com/Vijayzk/myBlogs.git
 
 cd frontend
 
