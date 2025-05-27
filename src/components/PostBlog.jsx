@@ -48,6 +48,8 @@ const PostBlog = () => {
     setAiText('')
   }
 
+  const validTypes = ['image/jpeg', 'image/png'];
+
   const handleSubmit = async (e) => {
     setSubmitLoader(true)
     e.preventDefault()
@@ -85,6 +87,16 @@ const PostBlog = () => {
       setTimeout(() => {
         setError('')
       }, 2000)
+      return;
+    }
+
+    if (!validTypes.includes(image.type)) {
+      setSubmitLoader(false)
+      setError('Only JPG or PNG images are allowed.');
+      setTimeout(() => {
+        setError('')
+      }, 2000)
+      setImage();
       return;
     }
 
