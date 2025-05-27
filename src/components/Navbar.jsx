@@ -67,7 +67,6 @@ const Navbar = ({ name }) => {
                                 <Link className="btn btn-sm lg:btn-md hover:bg-purple-700 bg-purple-800 shadow-md text-[#F9F5FF] rounded-lg" to='/signup'>
                                     Signup
                                 </Link>
-                                <span className='text-[#6941C6]'>Or</span>
                                 <Link className="btn btn-sm lg:btn-md hover:text-purple-700 text-purple-800  shadow-md hover:bg-base-300 bg-[#F9F5FF] rounded-lg" to='/login'>
                                     Login
                                 </Link>
@@ -86,7 +85,7 @@ const Navbar = ({ name }) => {
                     {
                         user &&
                         <div className="dropdown ml-2">
-                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                            <div tabIndex={0} role="button" className="btn btn-sm lg:hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block h-5 w-5 stroke-current"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg></div>
                             <ul
                                 tabIndex={0}
