@@ -96,7 +96,7 @@ const Login = () => {
             <Link to='/signup' className='btn bg-purple-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-800 text-white mt-1 px-6'>Signup</Link>
           </motion.div>
         </div>
-        <div className="bg-base-100 flex flex-col lg:pt-24 pt-66 lg:justify-center items-center w-full lg:w-1/2">
+        <div className="bg-base-100 flex flex-col lg:pt-24 pt-46 lg:justify-center items-center w-full lg:w-1/2">
           <h1 className="text-3xl lg:text-4xl underline font-bold text-[#6941C6] flex flex-row space-x-2"><span>Login now!</span><TbLogin2 size={50} /></h1>
           <form className="flex flex-col w-1/2 justify-center items-center mt-10 space-y-6" onSubmit={handleLogin}>
 
