@@ -16,17 +16,18 @@ const Navbar = ({ name }) => {
     const user = useSelector((state) => state.user.user);
 
     const logoutWithGoogle = async () => {
+        setLoader(true);
         axios.get(`${import.meta.env.VITE_BACKEND}/auth/logout`, {
             withCredentials: true
         }).then((res) => {
-            //console.log(res)
+            setLoader(false);
             dispatch(clearUser());
             navigate('/');
             setToast(`Logged Out.`)
             setTimeout(() => {
                 setToast('')
             }, 3000)
-        });
+        }).catch((error) => setLoader(false));
     };
 
 
