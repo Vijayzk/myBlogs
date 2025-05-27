@@ -90,7 +90,7 @@ const PostBlog = () => {
       return;
     }
 
-    if (!validTypes.includes(image.type)) {
+    if (!validTypes.includes(image?.type)) {
       setSubmitLoader(false)
       setError('Only JPG or PNG images are allowed.');
       setTimeout(() => {
