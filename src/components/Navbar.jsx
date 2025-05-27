@@ -12,6 +12,7 @@ const Navbar = ({ name }) => {
     const dispatch = useDispatch();
     const [isScrolled, setIsScrolled] = useState(false);
     const [toast, setToast] = useState();
+    const [loader,setLoader] = useState(false);
 
     const user = useSelector((state) => state.user.user);
 
