@@ -113,7 +113,7 @@ const Blogs = () => {
 
         {/* Blog Details */}
         <dialog id='my_modal_3' className='fixed top-30 left-5 md:left-1/6 lg:top-20 lg:left-1/3 rounded-4xl px-4 lg:px-10'>
-          <div className='flex flex-row justify-center w-[240px] h-[540px] md:w-[420px] lg:w-[500px] lg:h-[460px] bg-white rounded-4xl px-2 md:px-5 mb-5 lg:mb-14 pt-10 lg:pt-0'>
+          <div className='flex flex-row justify-center w-[260px] h-[380px] md:w-[420px] lg:w-[500px] lg:h-[460px] bg-white rounded-4xl px-2 md:px-5 mb-5 lg:mb-14 pt-10 lg:pt-0'>
             <div className='flex flex-col lg:mt-16 space-y-6 lg:mx-0 mx-6'>
               <div className='flex flex-row justify-between'>
                 <h1 className='lg:text-2xl text-lg text-[#42307D] font-bold'>{data?.title}</h1>
