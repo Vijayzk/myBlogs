@@ -196,7 +196,7 @@ const YourBlog = () => {
         </div>
 
         {/* Details Modal */}
-        <dialog id='my_modal_3' className='fixed top-35 md:top-30 lg:top-20 left-10 md:left-1/6 lg:left-1/3 rounded-4xl px-10'>
+        <dialog id='my_modal_3' className='fixed top-30 md:top-30 lg:top-20 left-5 md:left-1/6 lg:left-1/3 rounded-4xl px-10'>
           <div className='flex flex-row justify-center w-[240px] md:w-[460px] lg:w-[500px] h-[540px] lg:h-[570px] bg-white rounded-4xl px-5 mb-4 lg:mb-0'>
             <div className='flex flex-col mt-10 lg:mt-16 space-y-6 lg:mx-0 mx-6'>
               <LuPencil size={20} onClick={() => { document.getElementById('my_modal_2').showModal(), setUpdateData(data), setUpdatedTitle(data?.title), setUpdatedDescription(data?.description) }} className='absolute top-10 lg:top-12 right-4 lg:right-10 cursor-pointer' />
@@ -223,7 +223,7 @@ const YourBlog = () => {
         </dialog>
 
         {/* Update Modal */}
-        <dialog id='my_modal_2' className='fixed top-45 lg:top-20 left-10 md:left-2/8 lg:left-1/3 rounded-4xl px-10 md:px-0 lg:px-10 pb-4'>
+        <dialog id='my_modal_2' className='fixed top-35 lg:top-20 left-5 md:left-2/8 lg:left-1/3 rounded-4xl px-10 md:px-0 lg:px-10 pb-4'>
           <div className='flex flex-row justify-center w-[240px] md:w-[360px] lg:w-[500px] h-[540px] lg:h-[580px] bg-white rounded-4xl px-5'>
             <div className='flex flex-col mt-10 lg:mt-16 space-y-6 lg:mx-0 mx-6 w-full'>
               <h1 className='lg:text-3xl text-2xl text-[#42307D] text-center pt-2 font-bold'>Update Post</h1>
@@ -263,7 +263,7 @@ const YourBlog = () => {
         </dialog>
 
         {/* Delete Modal */}
-        <dialog id='my_modal_1' className='fixed top-70 left-15 md:left-1/6 lg:left-2/5 rounded-4xl px-10'>
+        <dialog id='my_modal_1' className='fixed top-50 left-15 md:left-1/6 lg:left-2/5 rounded-4xl px-10'>
           <div className='flex flex-row justify-center w-[180px] md:w-[260px] lg:w-[250px] h-[180px] lg:h-[220px] bg-white rounded-4xl px-5'>
             <div className='flex flex-col mt-10 lg:mt-10 space-y-6 lg:mx-0 mx-6 w-full'>
               <div className='flex flex-col justify-center items-center lg:space-y-3'>
