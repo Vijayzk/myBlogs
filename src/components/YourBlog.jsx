@@ -223,7 +223,7 @@ const YourBlog = () => {
         </dialog>
 
         {/* Update Modal */}
-        <dialog id='my_modal_2' className='fixed top-35 lg:top-20 left-5 md:left-2/8 lg:left-1/3 rounded-4xl px-10 md:px-0 lg:px-10 pb-4'>
+        <dialog id='my_modal_2' className='fixed top-30 lg:top-20 left-5 md:left-2/8 lg:left-1/3 rounded-4xl px-10 md:px-0 lg:px-10 pb-4'>
           <div className='flex flex-row justify-center w-[240px] md:w-[360px] lg:w-[500px] h-[540px] lg:h-[580px] bg-white rounded-4xl px-5'>
             <div className='flex flex-col mt-10 lg:mt-16 space-y-6 lg:mx-0 mx-6 w-full'>
               <h1 className='lg:text-3xl text-2xl text-[#42307D] text-center pt-2 font-bold'>Update Post</h1>
