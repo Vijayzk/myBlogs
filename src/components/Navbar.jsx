@@ -47,7 +47,7 @@ const Navbar = ({ name }) => {
             {toast ? <SuccessToast message={toast} /> : ``}
             <div className={`navbar fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${isScrolled ? "bg-white/10 backdrop-blur border-b border-white/20" : "bg-base-300"}`}>
                 <div className="navbar-start cursor-pointer" onClick={() => navigate('/')}>
-                    <img className='w-10 h-10 mt-2 ml-2 lg:mt-2 lg:ml-6' src={logo} alt="myblogs" />
+                    <img className='rounded-full w-10 lg:h-10 mt-2 ml-2 lg:mt-2 lg:ml-6' src={logo} alt="myblogs" />
                     <h1 className="text-lg lg:text-xl text-black ml-2 font-bold">my<span className='font-bold text-[#6941C6]'>Blogs</span></h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
