@@ -78,7 +78,7 @@ const Navbar = ({ name }) => {
                                     alt="Img"
                                     src={user.user === undefined ? user?.pictureUrl : user?.user?.pictureUrl}
                                 />
-                                <button className='btn bg-red-600 logout-linear-gradient text-white btn-sm mt-1 lg:btn-md lg:mt-0' onClick={logoutWithGoogle}>Logout</button>
+                                <button className='btn bg-red-600 logout-linear-gradient text-white btn-sm mt-1 lg:btn-md lg:mt-0' onClick={logoutWithGoogle}>{loader ?<span className="loading loading-spinner loading-md" />:`Logout`}</button>
                             </div>
                     }
 
