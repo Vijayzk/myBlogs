@@ -64,9 +64,9 @@ const Login = () => {
       }
 
       if (response.data) {
-        //navigate('/');
+        navigate('/');
         setLoader(false);
-        //window.location.reload();
+        window.location.reload();
       }
 
     } catch (error) {
