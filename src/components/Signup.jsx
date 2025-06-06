@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import axios from 'axios';
-import Cookies from 'js-cookie';
+import ErrorToast from './Toast/ErrorToast';
 import { FcGoogle } from "react-icons/fc";
 import { TbLogin } from "react-icons/tb";
 import { MdEmail } from "react-icons/md";
@@ -23,6 +23,9 @@ const Signup = () => {
   const [loader, setLoader] = useState(false);
   const [googleLoader, setGoogleLoader] = useState(false);
   const [error, setError] = useState({ name: false, email: false, password: false });
+  const [errorToast, setErrorToast] = useState();
+
+  const validTypes = ['image/jpeg', 'image/png'];
 
   const handleSignup = async (e) => {
     e.preventDefault()
@@ -57,6 +60,26 @@ const Signup = () => {
       return;
     }
 
+    if (profile?.size > 5242880) {
+      setLoader(false)
+      setErrorToast('Select image smaller than 5MB.')
+      setTimeout(() => {
+        setErrorToast('')
+      }, 2000)
+      setProfile();
+      return;
+    }
+
+    if (!validTypes.includes(profile?.type)) {
+      setLoader(false)
+      setErrorToast('Only JPG or PNG images are allowed.');
+      setTimeout(() => {
+        setErrorToast('')
+      }, 2000)
+      setProfile();
+      return;
+    }
+
 
     try {
       const data = {
@@ -76,6 +99,14 @@ const Signup = () => {
       if (response.data && response.data.error) {
         console.log(response);
         setLoader(false);
+        setErrorToast(response.data.error)
+        setTimeout(() => {
+          setErrorToast('')
+        }, 2000)
+        setName('');
+        setEmail('');
+        setPassword('');
+        return;
       }
 
       if (response.data) {
@@ -98,6 +129,7 @@ const Signup = () => {
   return (
     <>
       <Navbar name='Signup' />
+      {errorToast && <ErrorToast message={errorToast} />}
       <div className="min-h-screen flex lg:flex-row lg:pb-0 pb-10">
         <div className="lg:flex flex-col justify-center items-center w-1/2 text-center px-10 hidden" style={
           {
@@ -174,7 +206,7 @@ const Signup = () => {
                   className="file-input file-input-sm lg:w-94 w-80"
                   onChange={(e) => { setProfile(e.target.files[0]), e.target.files[0] ? setError({ profile: false }) : setError({ profile: true }) }}
                 />
-                <span className="text-xs">Max file size 10KB</span>
+                <span className="text-xs">Max file size 2MB</span>
               </label>
               {error.profile ? <span className='text-red-500 text-xs pt-2 ml-1'>Select a profile picture.</span> : ``}
             </div>
@@ -192,3 +224,4 @@ const Signup = () => {
 }
 
 export default Signup
+
